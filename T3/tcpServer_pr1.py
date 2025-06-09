@@ -1,5 +1,5 @@
 import socket
-host = socket.gethostname()
+host = "localhost"
 port = 5000
 buffer_size = 1024
 with socket.socket() as s:
