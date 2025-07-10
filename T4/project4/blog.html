@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Blog Post</h1>
+    <form method="GET">
+        <input type="text" name="q" placeholder="Search by title or content" />
+        <button type="submit">Search</button>
+    </form>
+    
+    {% for i in blog %}
+        <h4>Established: {{i.publish_date}}</h4>
+        <h4>Created at: {{i.created_at}}</h4>
+        <h4>Views: {{i.views}}</h4>
+        <img src="{{i.cover_image.url}}" style="width: 450px;height: 250px;"><br>
+        <a href="{{i.reference_link}}">Reference Link</a>
+        <h4>Content: {{i.content}}</h4>
+    {% endfor %}
+</body>
+</html>
