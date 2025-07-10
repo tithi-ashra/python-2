@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Student Information</title>
+</head>
+<body>
+    {% extends 'welcome.html' %}
+
+    {% block content %}
+        <p><strong>MY NAME IS </strong> {{ roll.Name }}</p>
+        <p><strong>MY MAIL ID IS </strong> {{ roll.Email }}</p>
+    {% endblock content %}
+
+</body>
+</html>
