@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h2>Edit student</h2>
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Please enter your name" value="{{student.name}}">
+        <label for="roll">roll</label>
+        <input type="number" name="roll" value="{{student.roll}}">
+        <label for="mail">Email</label>
+        <input type="email" name="mail" placeholder="please enter your email" value="{{student.email}}">
+        <label for="birthdate">Birthdate</label>
+        <input type="date" name="birthdate" value="{{student.birthdate}}">
+        <label for="sub">Subject1</label>
+        <input type="text" name="sub" value="{{student.subject1}}">
+        <label for="thg">Thgarde</label>
+        <input type="text" name="thg" value="{{student.thgrade}}">
+        <label for="prg">Prgrade</label>
+        <input type="text" name="prg" value="{{student.prgrade}}">
+        <input type="submit" value="Update">
+    </form> 
+    <a href="{% url 'student_list' %}">Back to list</a>
+{% endblock %}

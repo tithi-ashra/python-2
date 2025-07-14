@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if student %}
+        <h1>Show Data</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Roll</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Birth_Date</th>
+                <th>Subject1</th>
+                <th>Thgrade</th>
+                <th>Prgrade</th>
+            </tr>
+            {% for st in student %}
+            <tr>
+                <td>{{st.id}}</td>
+                <td>{{st.roll}}</td>
+                <td>{{st.name}}</td>
+                <td>{{st.email}}</td>
+                <td>{{st.birthdate}}</td>
+                <td>{{st.subject1}}</td>
+                <td>{{st.thgrdae}}</td>
+                <td>{{st.prgrade}}</td>
+                <td>
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>No Data</h1>
+    {% endif %}
+{% endblock %}
